@@ -1,26 +1,27 @@
 body {
-  font: 14px Avenir;
+  font: 13px Avenir;
   margin: 0;
 }
 
 h1 {
   font: bold 36px Didot, "Didot LT STD";
   letter-spacing: -2px;
-  margin: 15% 0 0 0;
+  /* margin: 15% 0 0 0; */
 }
 
 h2 {
   font: bold 26px Didot, "Didot LT STD";
   letter-spacing: -1px;
+  margin-bottom: 0px;
 }
 
 h3 {
   font: bold 16px Didot, "Didot LT STD";
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .article-page-link {
-  font-weight: bold;
+  font-weight: 900;
   text-decoration: none;
   color: black;
   letter-spacing: -0.5px;
@@ -29,10 +30,12 @@ h3 {
 .header {
   grid-area: header;
   background-image: url("../images/background.jpg");
-  background-color: #ffd4d4; /* Used if the image is unavailable */
-  height: 100%;
+  background-color: #ffd4d4;
   background-size: cover;
   background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -42,8 +45,13 @@ h3 {
 }
 
 .main {
+  padding: 10%;
   grid-area: main;
-  background-color: yellow;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 60px;
+  /* grid-gap: 2rem; */
 }
 
 .footer {
@@ -52,14 +60,22 @@ h3 {
   text-align: center;
 }
 
+/* main {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+} */
+
 article {
-  width: 300px;
+  /* margin: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .grid-container {
   display: grid;
-  grid-template-rows: 1fr 8fr 3fr 1fr;
-  grid-template-columns: 1fr;
   grid-template-areas:
     "header"
     "main"
@@ -67,18 +83,37 @@ article {
     "footer";
 }
 
-@media (min-width: 501px){
+@media (min-width: 800px){
   .grid-container {
     grid-template-columns: auto 20%;
-    grid-template-rows: 20% 70% 10%;
-    grid-gap: 10px;
+    grid-template-rows: 10% 80% 10%;
     grid-template-areas:
       "header header"
       "main side"
       "footer footer";
   }
-  .main {
-   display: flex;
-   justify-content: space-evenly;
- }
+}
+
+article > div {
+  border-radius: 5px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+#chimamanda {
+  background-image: url('../images/chimananda.png');
+}
+
+#serena {
+  background-image: url('../images/serena.png');
+}
+
+#malala {
+  background-image: url('../images/malala.png');
+}
+
+#frida {
+  background-image: url('../images/frida.png');
 }
