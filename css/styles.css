@@ -76,7 +76,7 @@ article > a > div:hover {
 }
 
 .main {
-  padding: 10%;
+  padding: 6% 10%;
   grid-area: main;
   margin: 0 auto;
   display: grid;
