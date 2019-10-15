@@ -35,7 +35,6 @@ a {
 article {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
   justify-content: flex-start;
 
 }
@@ -66,10 +65,9 @@ article > a > div:hover {
 
 .info {
   grid-area: info;
-  padding: 0 10% 5% 10%;
+  padding: 8% 10% 5% 10%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
@@ -111,6 +109,10 @@ article > a > div:hover {
   .container {
     grid-template-rows: 1.5fr auto 2fr 1fr;
   }
+  .info {
+    flex-direction: row;
+    justify-content: center;
+  }
   article > a > div {
     height: 250px;
     background-size: 180px;
@@ -131,6 +133,10 @@ article > a > div:hover {
 @media (min-width: 901px){
   .container {
     grid-template-rows: 3.5fr auto auto 1fr;
+  }
+  .info {
+    flex-direction: row;
+    justify-content: center;
   }
   h1 {
     font-size: 46px;
