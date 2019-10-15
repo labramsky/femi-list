@@ -74,7 +74,7 @@ article > a > div:hover {
 }
 
 .main {
-  padding: 7% 10%;
+  padding: 10%;
   grid-area: main;
   margin: 0 auto;
   display: grid;
@@ -109,6 +109,9 @@ article > a > div:hover {
   .container {
     grid-template-rows: 1.5fr auto 2fr 1fr;
   }
+  .main {
+    padding: 7% 10%;
+  }
   .info {
     flex-direction: row;
     justify-content: center;
@@ -133,6 +136,9 @@ article > a > div:hover {
 @media (min-width: 901px){
   .container {
     grid-template-rows: 3.5fr auto auto 1fr;
+  }
+  .main {
+    padding: 7% 10%;
   }
   .info {
     flex-direction: row;
